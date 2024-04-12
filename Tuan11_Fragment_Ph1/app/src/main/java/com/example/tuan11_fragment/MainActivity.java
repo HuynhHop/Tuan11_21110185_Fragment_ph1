@@ -50,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Xac nhan"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Lay hang"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("dang giao"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("danh gia"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Huy"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Xác nhận"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Lấy hàng"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Đang giao"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Đánh giá"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Hủy"));
 
         FragmentManager fragmentManager =getSupportFragmentManager();
         viewPager2Adapter =new ViewPager2Adapter(fragmentManager,getLifecycle());
@@ -111,24 +111,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        int id=item.getItemId();
+        int id = item.getItemId();
+        System.out.println(id);
         switch (id){
-            case 0:
-                Toast.makeText(this, "Ban dang chon search", Toast.LENGTH_SHORT).show(); break;
-            case 2:
-                Toast.makeText(this, "Ban dang chon more", Toast.LENGTH_SHORT).show();
+            case 2131230990:
+                Toast.makeText(this, "Bạn đang chọn Search", Toast.LENGTH_SHORT).show();
                 break;
-            case 3:
-                Toast.makeText(this, "Ban dang chon more", Toast.LENGTH_SHORT).show();
+            case 2131230989:
+                Toast.makeText(this, "Bạn đang chọn New group", Toast.LENGTH_SHORT).show();
                 break;
-            case 4:
-                Toast.makeText(this, "Ban dang chon more", Toast.LENGTH_SHORT).show();
+            case 2131230987:
+                Toast.makeText(this, "Bạn đang chọn New Broadcast", Toast.LENGTH_SHORT).show();
                 break;
-            case 5:
-                Toast.makeText(this, "Ban dang chon more", Toast.LENGTH_SHORT).show();
+            case 2131230993:
+                Toast.makeText(this, "Bạn đang chọn WhatsApp web", Toast.LENGTH_SHORT).show();
                 break;
-            case 6:
-                Toast.makeText(this, "Ban dang chon setting", Toast.LENGTH_SHORT).show();
+            case 2131230988:
+                Toast.makeText(this, "Bạn đang chọn Started Messages", Toast.LENGTH_SHORT).show();
+                break;
+            case 2131230991:
+                Toast.makeText(this, "Bạn đang chọn Settings", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
